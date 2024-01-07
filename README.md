@@ -71,9 +71,6 @@ javac ClienteMain.java
 java ClienteMain
 </pre>
 
-De este modo obtendremos algo similar a esto:
-
-![Imagen](https://github.com/elarreglador/Puzle-deslizante/blob/main/SCREENSHOTS/1.png)
 
 
 
