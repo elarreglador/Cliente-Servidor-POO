@@ -1,22 +1,25 @@
 public class ServidorMain implements Runnable {
 
+    private libServidor servidor;
+
     public static void main(String[] args) {
+        ServidorMain servidorMain = new ServidorMain();
+        
+        // Inicia el servidor fuera del bucle
+        servidorMain.servidor = new libServidor(6996);
+        servidorMain.servidor.abreSocket();
+        servidorMain.servidor.abreStreams();
 
         while (true) {
-            // Inicia el servidor
-            libServidor servidor = new libServidor(6996);
-            servidor.abreSocket();
-            servidor.abreStreams();
-
-            // prepara y lanza hilos
-            Thread hilo = new Thread();
+            // Espera y acepta una nueva conexión en cada iteración del bucle
+            Thread hilo = new Thread(servidorMain);
             hilo.start();
         }
     }
 
     @Override
     public void run() {
-        
+
         int butacasCen = 54;
         int butacasCenPrecio = 80;
         int butacasGal = 8;
