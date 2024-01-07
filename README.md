@@ -1,5 +1,3 @@
-![Imagen](https://github.com/elarreglador/Puzle-deslizante/blob/main/SCREENSHOTS/Social%20preview.png)
-
 
 ************************************
 ACERCA DEL AUTOR
